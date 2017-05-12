@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
+import { LocalStorageService } from 'ngx-webstorage';
+import { OAuth2 } from '../models/OAuth2';
 
 @Component({
   selector: 'app-authorization',
   templateUrl: './authorization.component.html',
-  styleUrls: ['./authorization.component.css']
+  styleUrls: ['./authorization.component.css'],
 })
 export class AuthorizationComponent implements OnInit {
 
-  constructor(private activeRoute: ActivatedRoute) { }
+  constructor(
+    private router: Router,
+    private activeRoute: ActivatedRoute,
+    private localStorageService: LocalStorageService
+  ) { }
 
   ngOnInit() {
-    this.activeRoute.queryParams.subscribe((params) => console.log(params.code))
+    this.activeRoute.fragment.subscribe((params) => {
+      this.localStorageService.store('access_token', params.split('&')[0].split('=')[1]);
+      this.router.navigate(['/dashboard']);
+    });
   }
 
 }
