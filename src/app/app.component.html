@@ -1,21 +1,18 @@
 <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+    aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">Belajar Angular 4</a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <a class="navbar-brand" href="#">Belajar Angular 4</a>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
-    <div class="container">
-      <div class="jumbotron text-center">
-        <h1>{{title}}</h1>
-        <p class="lead">{{description}}</p>
-        <a class="btn btn-lg btn-primary" href="https://accounts.spotify.com/authorize?client_id={{clientId}}&response_type={{responseType}}&redirect_uri={{redirectUri}}&scope={{scope}}" role="button">Sign In</a>
-      </div>
-    </div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
