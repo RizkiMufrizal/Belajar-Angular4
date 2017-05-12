@@ -15,6 +15,8 @@ import { AuthenticatedGuardService } from './helpers/authenticated-guard.service
 import { SessionManagerService } from './helpers/session-manager.service';
 import { PlaylistComponent } from './playlist/playlist.component';
 import { PlaylistDetailComponent } from './playlist-detail/playlist-detail.component';
+import { TrackComponent } from './track/track.component';
+import { TrackDetailComponent } from './track-detail/track-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { PlaylistDetailComponent } from './playlist-detail/playlist-detail.compo
     HomeComponent,
     DashboardComponent,
     PlaylistComponent,
-    PlaylistDetailComponent
+    PlaylistDetailComponent,
+    TrackComponent,
+    TrackDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +45,11 @@ import { PlaylistDetailComponent } from './playlist-detail/playlist-detail.compo
       {
         path: 'playlist',
         component: PlaylistComponent,
+        canActivate: [AuthenticatedGuardService]
+      },
+      {
+        path: 'track/:playlistId',
+        component: TrackComponent,
         canActivate: [AuthenticatedGuardService]
       },
       {

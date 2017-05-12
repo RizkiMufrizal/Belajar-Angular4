@@ -7,5 +7,5 @@ export class PlayList {
 }
 
 export class PlayListResponse {
-    items:PlayList[];
+    items: PlayList[];
 }

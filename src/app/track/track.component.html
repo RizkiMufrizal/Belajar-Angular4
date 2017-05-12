@@ -1,0 +1,9 @@
+<div class="album text-muted">
+  <div class="container">
+    <div class="row">
+      <div class="card" *ngFor="let item of items">
+        <app-track-detail [track]="item.track"></app-track-detail>
+      </div>
+    </div>
+  </div>
+</div>

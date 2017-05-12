@@ -14,10 +14,15 @@ export class PlaylistService {
   ) { }
 
   getPlayLists(): Observable<PlayListResponse> {
-    let headers = new Headers({ 'Authorization': 'Bearer ' + this.sessionManagerService.getAccessToken() });
+    let headers = new Headers({ 'Authorization': `Bearer ${this.sessionManagerService.getAccessToken()}` });
     let requestOpt = new RequestOptions({ headers: headers });
 
     return this.http.get('https://api.spotify.com/v1/me/playlists', requestOpt)
-      .map((response: Response) => response.json());
+      .map((response: Response) => response.json())
+      .catch(error => {
+        if (error.status == 401) {
+          return Observable.throw('error mas broe')
+        }
+      })
   }
 }

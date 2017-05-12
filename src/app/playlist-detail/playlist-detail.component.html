@@ -1,4 +1,3 @@
-<img class="card-img-top" src="{{playlist.images[0].url}}" alt="Card image cap">
-<div class="card-block">
-  <p class="card-text">{{playlist.name}}</p>
-</div>
+<img class="custom-image" src="{{playlist.images[0].url}}" alt="Card image cap">
+<p class="card-text">{{playlist.name}}</p>
+<button type="button" (click)="onSelect(playlist)" class="btn btn-primary">Detail</button>

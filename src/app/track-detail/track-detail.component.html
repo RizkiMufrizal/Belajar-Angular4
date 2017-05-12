@@ -1,0 +1,8 @@
+<img class="custom-image" src="{{track.album.images[0].url}}" alt="Card image cap">
+<audio controls>
+  <source src="{{track.preview_url}}" type="audio/ogg">
+  <source src="{{track.preview_url}}" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>
+<p class="card-text">Artis : {{arrayArtistsToString(track.artists)}}</p>
+<p class="card-text">Judul : {{track.name}}</p>
+<p class="card-text">Album : {{track.album.name}}</p>

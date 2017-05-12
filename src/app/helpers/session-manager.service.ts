@@ -16,6 +16,10 @@ export class SessionManagerService {
     return this.accessToken
   }
 
+  getUserId(): string {
+    return this.userId
+  }
+
   saveUserId(userId: string) {
     this.localStorageService.store('userId', userId)
   }
