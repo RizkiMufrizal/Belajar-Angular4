@@ -18,6 +18,11 @@ export class ProfileService {
     let requestOpt = new RequestOptions({ headers: headers });
 
     return this.http.get('https://api.spotify.com/v1/me', requestOpt)
-      .map((response: Response) => response.json());
+      .map((response: Response) => response.json())
+      .catch(error => {
+        if (error.status == 401) {
+          return Observable.throw('error mas broe')
+        }
+      })
   }
 }
