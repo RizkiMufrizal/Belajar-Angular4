@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticatedGuardService } from './helpers/authenticated-guard.service';
 import { SessionManagerService } from './helpers/session-manager.service';
+import { PlaylistComponent } from './playlist/playlist.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { SessionManagerService } from './helpers/session-manager.service';
     AuthorizationComponent,
     NotFoundComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    PlaylistComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,11 @@ import { SessionManagerService } from './helpers/session-manager.service';
       {
         path: 'dashboard',
         component: DashboardComponent,
+        canActivate: [AuthenticatedGuardService]
+      },
+      {
+        path: 'playlist',
+        component: PlaylistComponent,
         canActivate: [AuthenticatedGuardService]
       },
       {

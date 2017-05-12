@@ -7,6 +7,9 @@ export class SessionManagerService {
   @LocalStorage('access_token')
   private accessToken;
 
+  @LocalStorage('userId')
+  private userId;
+
   constructor(private localStorageService: LocalStorageService) { }
 
   getAccessToken(): string {
@@ -19,5 +22,10 @@ export class SessionManagerService {
 
   isAccessToken(): boolean {
     return this.accessToken != null ? true : false
+  }
+
+  clear() {
+    this.accessToken.clear()
+    this.userId.clear()
   }
 }
