@@ -14,6 +14,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthenticatedGuardService } from './helpers/authenticated-guard.service';
 import { SessionManagerService } from './helpers/session-manager.service';
 import { PlaylistComponent } from './playlist/playlist.component';
+import { PlaylistDetailComponent } from './playlist-detail/playlist-detail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlaylistComponent } from './playlist/playlist.component';
     NotFoundComponent,
     HomeComponent,
     DashboardComponent,
-    PlaylistComponent
+    PlaylistComponent,
+    PlaylistDetailComponent
   ],
   imports: [
     BrowserModule,

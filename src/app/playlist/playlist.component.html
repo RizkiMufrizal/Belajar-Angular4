@@ -1,8 +1,5 @@
 <div class="card-deck">
   <div class="card" *ngFor="let playlist of playlists">
-    <img class="card-img-top" src="{{playlist.images[0].url}}" alt="Card image cap">
-    <div class="card-block">
-      <p class="card-text">{{playlist.name}}</p>
-    </div>
+    <app-playlist-detail [playlist]="playlist"></app-playlist-detail>
   </div>
 </div>
