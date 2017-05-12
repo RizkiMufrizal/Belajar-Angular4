@@ -12,5 +12,5 @@ export class HomeComponent {
   clientId = '3926f1313b24408a942e4cd64a7b74cd'
   responseType = 'token'
   redirectUri = 'http%3A%2F%2Flocalhost%3A4200%2Fcallback'
-  scope = 'user-read-email user-read-birthdate playlist-modify-public playlist-read-private'
+  scope = 'user-read-private user-read-email user-read-birthdate playlist-modify-public playlist-read-private'
 }
