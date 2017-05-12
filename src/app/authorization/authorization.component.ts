@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LocalStorageService } from 'ngx-webstorage';
-import { OAuth2 } from '../models/OAuth2';
 
 @Component({
   selector: 'app-authorization',
