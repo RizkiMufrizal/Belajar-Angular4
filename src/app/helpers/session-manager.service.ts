@@ -16,4 +16,8 @@ export class SessionManagerService {
   saveUserId(userId: string) {
     this.localStorageService.store('userId', userId)
   }
+
+  isAccessToken(): boolean {
+    return this.accessToken != null ? true : false
+  }
 }

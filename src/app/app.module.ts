@@ -11,6 +11,8 @@ import { AuthorizationComponent } from './authorization/authorization.component'
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AuthenticatedGuardService } from './helpers/authenticated-guard.service';
+import { SessionManagerService } from './helpers/session-manager.service';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     RouterModule.forRoot([
       {
         path: 'dashboard',
-        component: DashboardComponent
+        component: DashboardComponent,
+        canActivate: [AuthenticatedGuardService]
       },
       {
         path: 'home',
@@ -47,7 +50,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
       }
     ])
   ],
-  providers: [],
+  providers: [AuthenticatedGuardService, SessionManagerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
