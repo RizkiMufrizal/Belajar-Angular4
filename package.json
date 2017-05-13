@@ -4,7 +4,8 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "postinstall": "ng build --aot -prod",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,12 +24,13 @@
     "@ng-bootstrap/ng-bootstrap": "^1.0.0-alpha.25",
     "bootstrap": "4.0.0-alpha.6",
     "core-js": "^2.4.1",
+    "express": "^4.15.2",
     "ngx-webstorage": "^1.8.0",
     "rxjs": "^5.1.0",
     "zone.js": "^0.8.4"
   },
   "devDependencies": {
-    "@angular/cli": "1.0.3",
+    "@angular/cli": "^1.0.3",
     "@angular/compiler-cli": "^4.0.0",
     "@types/jasmine": "2.5.38",
     "@types/node": "~6.0.60",
