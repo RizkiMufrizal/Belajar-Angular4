@@ -10,7 +10,7 @@ import { Artist } from '../models/artist';
 export class TrackDetailComponent {
 
   @Input()
-  private track: Track
+  track: Track
 
   arrayArtistsToString(artists: Artist[]): string[] {
     return artists.map((data) => {

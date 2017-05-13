@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "postinstall": "./node_modules/@angular/cli/bin/ng build --aot -prod",
+    "postinstall": "./node_modules/bin/ng build --aot -prod",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",

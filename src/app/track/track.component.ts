@@ -19,7 +19,7 @@ export class TrackComponent implements OnInit {
     private activatedRoute: ActivatedRoute
   ) { }
 
-  private items: Item[]
+  items: Item[]
 
   ngOnInit() {
     this.activatedRoute.params
