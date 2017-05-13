@@ -4,12 +4,13 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "./node_modules/@angular/cli/bin/ng build --aot -prod",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "git push origin master && git push heroku master"
   },
   "private": true,
   "dependencies": {
